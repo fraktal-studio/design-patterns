@@ -1,7 +1,7 @@
 {
   "name": "com.fraktal.design-patterns",
   "displayName": "Fraktal Design Patterns",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "unity": "2021.3",
   "description": "Design patterns for Unity.",
   "author": { "name": "Fraktal Studio", "url": "https://github.com/fraktal-studio" },
