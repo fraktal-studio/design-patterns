@@ -41,7 +41,7 @@ namespace Fraktal.DesignPatterns
     /// }
     /// </code>
     /// </example>
-    public interface IPipelineStep<T>
+    public interface IPipelineStep<T> : ICancellable
     {
         /// <summary>
         /// Processes the input data and returns the transformed result.
@@ -60,12 +60,10 @@ namespace Fraktal.DesignPatterns
         /// <para>Avoid side effects when possible. If side effects are necessary (logging, caching, etc.), 
         /// document them clearly in the implementing class.</para>
         /// </remarks>
-        /// <exception cref="ArgumentException">May be thrown by implementations if the input is invalid and cannot be processed</exception>
-        /// <exception cref="InvalidOperationException">May be thrown by implementations if the step is in an invalid state</exception>
         /// <example>
         /// <code>
         /// // Simple validation step
-        /// public string Proccess(string input)
+        /// public string Process(string input)
         /// {
         ///     if (string.IsNullOrWhiteSpace(input))
         ///         throw new ArgumentException("Input cannot be null or empty", nameof(input));
@@ -84,6 +82,6 @@ namespace Fraktal.DesignPatterns
         /// }
         /// </code>
         /// </example>
-        public T Proccess(T input);
+        public T Process(T input);
     }
 }

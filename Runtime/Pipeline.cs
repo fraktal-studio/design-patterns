@@ -216,7 +216,7 @@ namespace Fraktal.DesignPatterns
             T currentVal = val;
             for (int i = 0; i < steps.Count; i++)
             {
-                currentVal = steps[i].Proccess(currentVal);
+                currentVal = steps[i].Process(currentVal);
             }
 
             return currentVal;
