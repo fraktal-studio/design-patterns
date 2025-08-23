@@ -217,6 +217,8 @@ namespace Fraktal.DesignPatterns
             for (int i = 0; i < steps.Count; i++)
             {
                 currentVal = steps[i].Process(currentVal);
+                if (steps[i].HasCancelled())
+                    return currentVal;
             }
 
             return currentVal;
